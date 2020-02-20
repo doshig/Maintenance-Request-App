@@ -1,0 +1,83 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>MaintenanceRequest</title>
+    <link rel="stylesheet" href="../static/styles.css">
+  </head>
+  <body ng-app="MRApp.demo">
+    <h1 align='center'><u>Maintenance Request Form</u></h1>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js'></script>
+    <script src={% static "/static.js" %}></script>
+  </br>
+</br>
+
+    {% verbatim %}
+    <div class="row" ng-controller="MRAppController">
+        <div class="container">
+        <div align="center" class="col-sm-12">
+            <!-- <select class="custom-select"> -->
+            <!-- <option selected>Select your first name</option> -->
+            <!-- <option ng-repeat="x in MyData">{{ x.first_name }}</option> -->
+            </select>
+            <h4 align="center">Select your NAME:</h4>
+            <select class="custom-select dropdown-specs" ng-model="firstnamedata" ng-options="x.first_name + ' ' + x.last_name for x in MyData"></select>
+        </div>
+    </br>
+        <!-- <div class="col-sm-4">
+            </select>
+            <h5 align="justify">Select your LAST NAME:</h5> 
+            <select class="custom-select dropdown-specs" ng-model="lastnamedata" ng-options="x.last_name for x in MyData"></select>
+        </div>
+    </br>
+        <div class="col-sm-4">
+            </select>
+            <h5 align="justify">Select your BADGE NUMBER:</h5>
+            <select class="custom-select dropdown-specs" ng-model="badgedata" ng-options="x.badge_number for x in MyData"></select>
+        </div>
+    </br>
+        <div class="col-sm-4">
+            </select>
+            <h5 align="justify">Select your DEPARTMENT:</h5>
+            <select class="custom-select dropdown-specs" ng-model="departmentdata" ng-options="x.department for x in MyData"></select>
+        </div>
+    </br>
+        <div class="col-sm-4">
+            </select>
+            <h5 align="justify">Select your SUPERVISOR:</h5>
+            <select class="custom-select dropdown-specs" ng-model="supervisordata" ng-options="x.authorized_supervisor for x in MyData"></select>
+        </div> -->
+    </br>
+    </br>
+        <div align="center" class="col-sm-12">
+            <p>First Name: <b>{{ firstnamedata.first_name}}</b></p>
+            <p>Last Name: <b>{{ firstnamedata.last_name}}</b></p>
+            <p>Badge Number: <b>{{ firstnamedata.badge_number}}</b></p>
+            <p>Department: <b>{{ firstnamedata.department}}</b></p>
+            <p>Authorized Supervisor: <b>{{ firstnamedata.authorized_supervisor}}</b></p>
+        </div>
+    </div>
+    </div>
+    
+    
+    {% endverbatim %}
+    </div>
+  </body>
+</html>
+  
+
+

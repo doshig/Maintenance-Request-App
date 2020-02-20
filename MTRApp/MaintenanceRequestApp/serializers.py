@@ -4,7 +4,8 @@ from .models import EmpId, Equipment, EquipmentProblem, Problem
 class EmpIdSerializer(serializers.ModelSerializer):
     class Meta:
         model = EmpId
-        fields = ('first_name', 'last_name', 'badge_number', 'department', 'authorized_supervisor')
+        fields = '__all__'
+        # fields = ('first_name', 'last_name', 'badge_number', 'department', 'authorized_supervisor')
         # depth = 2
 
 class EquipmentSerializer(serializers.ModelSerializer):

@@ -30,6 +30,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+#add 'rest_framework" and 'MaintenanceRequestaApp' to INSTALLED_APPS.
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
