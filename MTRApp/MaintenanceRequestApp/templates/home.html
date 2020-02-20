@@ -22,19 +22,23 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js'></script>
-    <script src={% static "/static.js" %}></script>
+    <script>document.write('<script src="{% static 'static.js' %}?ver=' + Math.floor(Math.random() * 100) + '"\><\/script>');</script>
+    <!-- <script src={% static "/static.js" %}></script> -->
   </br>
 </br>
-
+    
     {% verbatim %}
-    <div class="row" ng-controller="MRAppController">
-        <div class="container">
-        <div align="center" class="col-sm-12">
+    
+    <div class="container">
+        <div class="row">
+    <div ng-controller="MRAppController">
+
+        <div align="left" class="col-sm-12">
             <!-- <select class="custom-select"> -->
             <!-- <option selected>Select your first name</option> -->
             <!-- <option ng-repeat="x in MyData">{{ x.first_name }}</option> -->
-            </select>
-            <h4 align="center">Select your NAME:</h4>
+            <!-- </select> -->
+            <h4 align="left">Select your NAME:</h4>
             <select class="custom-select dropdown-specs" ng-model="firstnamedata" ng-options="x.first_name + ' ' + x.last_name for x in MyData"></select>
         </div>
     </br>
@@ -63,19 +67,38 @@
         </div> -->
     </br>
     </br>
-        <div align="center" class="col-sm-12">
+        <div align="left" class="col-sm-12">
             <p>First Name: <b>{{ firstnamedata.first_name}}</b></p>
             <p>Last Name: <b>{{ firstnamedata.last_name}}</b></p>
             <p>Badge Number: <b>{{ firstnamedata.badge_number}}</b></p>
             <p>Department: <b>{{ firstnamedata.department}}</b></p>
             <p>Authorized Supervisor: <b>{{ firstnamedata.authorized_supervisor}}</b></p>
         </div>
-    </div>
-    </div>
-    
-    
+            
+            <div class="row">
+                <div class="container">
+                <div align="left" class="col-sm-12">
+                    <h4 align="left">Select your EQUIPMENT:</h4>
+                    <select class="custom-select dropdown-specs" ng-model="equipmentdata" ng-options="y.equipment_number for y in MyDataEquipment"></select>
+                
+                </div>
+            
+            </br>
+            </br>
+            </br>
+            
+            
+                <div align="left" class="col-sm-12">
+                    <p>Equipment Number: <b>{{ equipmentdata.equipment_number }}</b></p>
+                    <p>Equipment Name: <b>{{ equipmentdata.equipment_name }}</b></p>
+                    <p>Equipment Location: <b>{{ equipmentdata.equipment_location }}</b></p>
+                </div>
+</div>
+</div>
+
     {% endverbatim %}
-    </div>
+
+
   </body>
 </html>
   
