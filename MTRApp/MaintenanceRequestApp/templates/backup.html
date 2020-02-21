@@ -29,8 +29,7 @@
     
     {% verbatim %}
     
-    <div class="container">
-        <div class="row">
+    
     <div ng-controller="MRAppController">
 
         <div align="left" class="col-sm-12">
@@ -42,29 +41,7 @@
             <select class="custom-select dropdown-specs" ng-model="firstnamedata" ng-options="x.first_name + ' ' + x.last_name for x in MyData"></select>
         </div>
     </br>
-        <!-- <div class="col-sm-4">
-            </select>
-            <h5 align="justify">Select your LAST NAME:</h5> 
-            <select class="custom-select dropdown-specs" ng-model="lastnamedata" ng-options="x.last_name for x in MyData"></select>
-        </div>
-    </br>
-        <div class="col-sm-4">
-            </select>
-            <h5 align="justify">Select your BADGE NUMBER:</h5>
-            <select class="custom-select dropdown-specs" ng-model="badgedata" ng-options="x.badge_number for x in MyData"></select>
-        </div>
-    </br>
-        <div class="col-sm-4">
-            </select>
-            <h5 align="justify">Select your DEPARTMENT:</h5>
-            <select class="custom-select dropdown-specs" ng-model="departmentdata" ng-options="x.department for x in MyData"></select>
-        </div>
-    </br>
-        <div class="col-sm-4">
-            </select>
-            <h5 align="justify">Select your SUPERVISOR:</h5>
-            <select class="custom-select dropdown-specs" ng-model="supervisordata" ng-options="x.authorized_supervisor for x in MyData"></select>
-        </div> -->
+       
     </br>
     </br>
         <div align="left" class="col-sm-12">
@@ -93,12 +70,12 @@
                     <p>Equipment Name: <b>{{ equipmentdata.equipment_name }}</b></p>
                     <p>Equipment Location: <b>{{ equipmentdata.equipment_location }}</b></p>
                 </div>
-</div>
-</div>
-<textarea class="form-control form-size" id="equipment_problem" placeholder="Equipment Issue: Electrical? Mechanical? Tooling? Coolant? Air Line? Hydraulic? Other?" ng-model="formInfo.equipment_problem">
-<input class="form-control" id="equipment_problem2" placeholder="Explain Issue in Detail" ng-model="formInfo.equipment_problem2">
+                </div>
+            </div>
+<input class="form-control form-size" id="equipment_problem" placeholder="Equipment Issue: Electrical? Mechanical? Tooling? Coolant? Air Line? Hydraulic? Other?" ng-model="formInfo.equipment_problem">
+<input class="form-control form-size" id="equipment_problem2" placeholder="Explain Issue in Detail" ng-model="formInfo2.equipment_problem2">
 
-<button ng-click="sendData(); equipData();" >CLICK WHEN COMPLETE</button>
+<button class="form-size-button" ng-click="addEquipmentProblem(formInfo, formInfo2);" >CLICK WHEN COMPLETE</button>
     {% endverbatim %}
 
 
