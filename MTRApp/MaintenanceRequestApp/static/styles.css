@@ -1,3 +1,12 @@
 .dropdown-specs {
     width: 300px;
 }
+
+.form-size {
+    width: 1000px;
+}
+
+.form-size-button{
+    width: 700px;
+    align-self: center;
+}
