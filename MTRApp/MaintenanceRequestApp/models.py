@@ -40,4 +40,16 @@ class Problem(DateAndTime):
 
 
 # class FinalRequest(DateAndTime):
+#     first_name = models.CharField(max_length=MAX_LENGTH, blank=False)
+#     last_name = models.CharField(max_length=MAX_LENGTH, blank=False)
+#     badge_number = models.IntegerField(blank=False)
+#     department = models.IntegerField(blank=False)
+#     authorized_supervisor = models.CharField(max_length=MAX_LENGTH)
+#     equipment_number = models.CharField(max_length=MAX_LENGTH)
+#     equipment_name = models.CharField(max_length=MAX_LENGTH)
+#     equipment_location = models.CharField(max_length=MAX_LENGTH)
+#     equipment_problem = models.CharField(max_length=MAX_LENGTH)
+#     explain_problem = models.CharField(max_length=2000)
     
+#     def __str__(self):
+#         return "{} {} {}".format(self.first_name, self.last_name, self.department)

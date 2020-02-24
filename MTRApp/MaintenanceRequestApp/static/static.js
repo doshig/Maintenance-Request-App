@@ -15,7 +15,7 @@
         });
         
         
-        $scope.addEquipmentProblem = function(equipProblem, problem){
+        $scope.addEquipmentProblem = function(equipProblem, problem){   
         
         var newEquipmentProblem = {
             equipment_problem: equipProblem.equipment_problem  
