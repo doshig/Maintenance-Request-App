@@ -32,19 +32,19 @@
     
     <div ng-controller="MRAppController">
 
-        <div align="left" class="col-sm-12">
+        <div align="center" class="col-sm-12">
             <!-- <select class="custom-select"> -->
             <!-- <option selected>Select your first name</option> -->
             <!-- <option ng-repeat="x in MyData">{{ x.first_name }}</option> -->
             <!-- </select> -->
-            <h4 align="left">Select your NAME:</h4>
+            <h4 align="center">Select your NAME:</h4>
             <select class="custom-select dropdown-specs" ng-model="firstnamedata" ng-options="x.first_name + ' ' + x.last_name for x in MyData"></select>
         </div>
     </br>
        
     </br>
     </br>
-        <div align="left" class="col-sm-12">
+        <div align="center" class="col-sm-12">
             <p>First Name: <b id="first_name_data">{{ firstnamedata.first_name }}</b></p>
             <p>Last Name: <b id="last_name_data">{{ firstnamedata.last_name }}</b></p>
             <p>Badge Number: <b id="badge_number_data">{{ firstnamedata.badge_number }}</b></p>
@@ -54,8 +54,8 @@
             
             <div class="row">
                 <div class="container">
-                <div align="left" class="col-sm-12">
-                    <h4 align="left">Select your EQUIPMENT:</h4>
+                <div align="center" class="col-sm-12">
+                    <h4 align="center">Select your EQUIPMENT:</h4>
                     <select class="custom-select dropdown-specs" ng-model="equipmentdata" ng-options="y.equipment_number for y in MyDataEquipment"></select>
                 
                 </div>
@@ -65,17 +65,23 @@
             </br>
             
             
-                <div align="left" class="col-sm-12">
+                <div align="center" class="col-sm-12">
                     <p>Equipment Number: <b id="equipment_number">{{ equipmentdata.equipment_number }}</b></p>
                     <p>Equipment Name: <b id="equipment_name">{{ equipmentdata.equipment_name }}</b></p>
                     <p>Equipment Location: <b id="equipment_location">{{ equipmentdata.equipment_location }}</b></p>
                 </div>
                 </div>
             </div>
+            </div>
+        </br>
+    </br>
+<div align="center">
 <input class="form-control form-size" id="equipment_problem" placeholder="Equipment Issue: Electrical? Mechanical? Tooling? Coolant? Air Line? Hydraulic? Other?" ng-model="formInfo.equipment_problem">
+</br>
 <input class="form-control form-size" id="equipment_problem2" placeholder="Explain Issue in Detail" ng-model="formInfo2.equipment_problem2">
+</br>
 <button class="form-size-button popup" ng-click="addEquipmentProblem(formInfo, formInfo2, formInfo3);">CLICK WHEN COMPLETE</button>
-    
+</div>
     {% endverbatim %}
 
 
