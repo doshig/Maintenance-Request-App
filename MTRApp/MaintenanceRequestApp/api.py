@@ -1,7 +1,7 @@
 from rest_framework.generics import ListAPIView, ListCreateAPIView
 
-from .serializers import EmpIdSerializer, EquipmentSerializer, EquipmentProblemSerializer, ProblemSerializer
-from .models import EmpId, Equipment, EquipmentProblem, Problem
+from .serializers import EmpIdSerializer, EquipmentSerializer, EquipmentProblemSerializer, ProblemSerializer, FinalRequestSerializer
+from .models import EmpId, Equipment, EquipmentProblem, Problem, FinalRequest
 
 class EmpIdApi(ListAPIView):
     queryset = EmpId.objects.all()
@@ -19,3 +19,6 @@ class ProblemApi(ListCreateAPIView):
     queryset = Problem.objects.all()
     serializer_class = ProblemSerializer
 
+class FinalRequestApi(ListCreateAPIView):
+    queryset = FinalRequest.objects.all()
+    serializer_class = FinalRequestSerializer

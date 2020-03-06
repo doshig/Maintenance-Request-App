@@ -45,11 +45,11 @@
     </br>
     </br>
         <div align="left" class="col-sm-12">
-            <p id={{firstnamedata.first_name}}>First Name: <b>{{ firstnamedata.first_name }}</b></p>
-            <p id={{firstnamedata.last_name}}>Last Name: <b>{{ firstnamedata.last_name }}</b></p>
-            <p id={{firstnamedata.badge_number}}>Badge Number: <b>{{ firstnamedata.badge_number }}</b></p>
-            <p id={{firstnamedata.department}}>Department: <b>{{ firstnamedata.department }}</b></p>
-            <p id={{firstnamedata.authorized_supervisor}}>Authorized Supervisor: <b>{{ firstnamedata.authorized_supervisor }}</b></p>
+            <p>First Name: <b id="first_name_data">{{ firstnamedata.first_name }}</b></p>
+            <p>Last Name: <b id="last_name_data">{{ firstnamedata.last_name }}</b></p>
+            <p>Badge Number: <b id="badge_number_data">{{ firstnamedata.badge_number }}</b></p>
+            <p>Department: <b id="department_data">{{ firstnamedata.department }}</b></p>
+            <p>Authorized Supervisor: <b id="supervisor_data">{{ firstnamedata.authorized_supervisor }}</b></p>
         </div>
             
             <div class="row">
@@ -66,16 +66,16 @@
             
             
                 <div align="left" class="col-sm-12">
-                    <p id={{equipmentdata.equipment_number}}>Equipment Number: <b>{{ equipmentdata.equipment_number }}</b></p>
-                    <p id={{equipmentdata.equipment_name}}>Equipment Name: <b>{{ equipmentdata.equipment_name }}</b></p>
-                    <p id={{equipmentdata.equipment_location}}>Equipment Location: <b>{{ equipmentdata.equipment_location }}</b></p>
+                    <p>Equipment Number: <b id="equipment_number">{{ equipmentdata.equipment_number }}</b></p>
+                    <p>Equipment Name: <b id="equipment_name">{{ equipmentdata.equipment_name }}</b></p>
+                    <p>Equipment Location: <b id="equipment_location">{{ equipmentdata.equipment_location }}</b></p>
                 </div>
                 </div>
             </div>
 <input class="form-control form-size" id="equipment_problem" placeholder="Equipment Issue: Electrical? Mechanical? Tooling? Coolant? Air Line? Hydraulic? Other?" ng-model="formInfo.equipment_problem">
 <input class="form-control form-size" id="equipment_problem2" placeholder="Explain Issue in Detail" ng-model="formInfo2.equipment_problem2">
-
-<button class="form-size-button" ng-click="addEquipmentProblem(formInfo, formInfo2);" >CLICK WHEN COMPLETE</button>
+<button class="form-size-button popup" ng-click="addEquipmentProblem(formInfo, formInfo2, formInfo3);">CLICK WHEN COMPLETE</button>
+    
     {% endverbatim %}
 
 

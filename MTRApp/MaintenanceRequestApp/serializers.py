@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import EmpId, Equipment, EquipmentProblem, Problem
+from .models import EmpId, Equipment, EquipmentProblem, Problem, FinalRequest
 
 class EmpIdSerializer(serializers.ModelSerializer):
     class Meta:
@@ -23,4 +23,9 @@ class EquipmentProblemSerializer(serializers.ModelSerializer):
 class ProblemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Problem
+        fields = '__all__'
+
+class FinalRequestSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FinalRequest
         fields = '__all__'
